@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Author: {{author.name}} {{author.patronymic}} {{author.surname}} </h1>
+
+<div style="margin-left:20px;margin-top:20px">
+<h4>Books</h4>
+
+<dl>
+{% for book in author.book_set.all %}
+  <dt>{book.name}</dt>
+  <dd>{{book.description}}</dd>
+{% endfor %}
+</dl>
+
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Library - Home Page</h1>
+  <p>Welcome to Library, a website where you can find <em>any book</em> for any taste!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books: </strong> {{ num_books }}</li>
+      <li><strong>Authors: </strong> {{ num_authors }}</li>
+    <li><strong>Orders: </strong> {{ num_orders }}</li>
+<!--    <li><strong>Not returned books: </strong> {{ lst_not_returned_books }}</li>-->
+  </ul>
+
+You have visited this page {{ num_visits }} time{% if num_visits > 1 %}s{% endif %}.
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div style="margin-left:20px;margin-top:20px;margin-right:250px">
+    <h1>Orders</h1>
+    <br>
+    {% if orders %}
+    <ul>
+        {% for order in orders %}
+                <li>
+                    Book name: {{ order.book.name}};<br> Created at: {{ order.created_at }};    <br>
+                    End at: {{ order.end_at }};<br> Plated end at: {{ order.plated_end_at }}.
+                    <br>
+                    <br>
+                </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>There are no orders.</p>
+    {% endif %}
+
+</div>
+{% endblock %}
